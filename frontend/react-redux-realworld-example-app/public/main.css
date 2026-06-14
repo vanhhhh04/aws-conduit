@@ -1,0 +1,214 @@
+/* ==========================================================================
+   Conduit — RealWorld demo app stylesheet
+   ========================================================================== */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1rem;
+  color: #373a3c;
+}
+
+a { color: #5cb85c; cursor: pointer; }
+a:hover { color: #187328; text-decoration: none; }
+
+/* ---------- Navbar ---------- */
+.navbar {
+  background: #fff;
+  border: 0;
+  border-bottom: 1px solid #efefef;
+  padding: .75rem 1rem;
+}
+.navbar-brand {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 1.5rem;
+  color: #5cb85c !important;
+}
+.navbar-nav .nav-link { color: #999; font-weight: 400; }
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active { color: #373a3c; }
+
+/* ---------- Banner ---------- */
+.banner {
+  background: #5cb85c;
+  background: linear-gradient(45deg, #5cb85c, #1c7430);
+  color: #fff;
+  padding: 2rem 0;
+  text-align: center;
+  box-shadow: inset 0 8px 8px -8px rgba(0,0,0,.3), inset 0 -8px 8px -8px rgba(0,0,0,.3);
+  margin-bottom: 2rem;
+}
+.banner .logo-font {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-shadow: 0 1px 3px rgba(0,0,0,.3);
+  margin-bottom: .25rem;
+}
+.banner p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: rgba(255,255,255,.8);
+  margin-bottom: 0;
+}
+
+/* ---------- Feed toggle ---------- */
+.feed-toggle {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #aaa;
+}
+.feed-toggle .nav-link { color: #aaa; cursor: pointer; padding: .5rem 1rem; }
+.feed-toggle .nav-link:hover { color: #555; }
+.feed-toggle .nav-link.active {
+  color: #5cb85c;
+  border-bottom: 2px solid #5cb85c;
+}
+
+/* ---------- Article preview ---------- */
+.article-preview {
+  border-top: 1px solid rgba(0,0,0,.1);
+  padding: 1.5rem 0;
+}
+.article-preview:first-of-type { border-top: none; }
+
+.article-meta {
+  display: flex;
+  align-items: center;
+  margin-bottom: .75rem;
+}
+.article-meta img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.article-meta .info { margin-right: auto; }
+.article-meta .info .author { display: block; font-weight: 700; color: #5cb85c; }
+.article-meta .info .date { display: block; color: #bbb; font-size: .8rem; }
+.article-meta .pull-xs-right { margin-left: auto; }
+
+.article-preview .preview-link { color: inherit; text-decoration: none; display: block; }
+.article-preview .preview-link h1 { font-weight: 600; font-size: 1.2rem; margin-bottom: .2rem; }
+.article-preview .preview-link p { font-weight: 300; font-size: .9rem; color: #999; margin-bottom: 1rem; }
+.article-preview .preview-link span { float: right; font-size: .8rem; color: #bbb; }
+
+/* ---------- Tags ---------- */
+.tag-list { display: flex; flex-wrap: wrap; gap: .25rem; }
+
+.tag-default, .tag-pill {
+  background: transparent;
+  border-radius: 10rem;
+  border: 1px solid #ddd;
+  color: #aaa;
+  font-size: .8rem;
+  padding: .1rem .6rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+.tag-default:hover { background: #ddd; color: #999; }
+
+.tag-primary, .tag-pill.tag-primary {
+  background: #5cb85c;
+  border-color: #5cb85c;
+  color: #fff;
+  border-radius: 10rem;
+  font-size: .8rem;
+  padding: .1rem .6rem;
+}
+
+.sidebar .tag-list { margin-top: .5rem; }
+.sidebar p { font-weight: 700; }
+
+/* ---------- Buttons ---------- */
+.btn-outline-primary { color: #5cb85c; border-color: #5cb85c; }
+.btn-outline-primary:hover { background-color: #5cb85c; border-color: #5cb85c; color: #fff; }
+.btn-primary { background-color: #5cb85c; border-color: #5cb85c; }
+.btn-primary:hover { background-color: #449d44; border-color: #449d44; }
+.btn-outline-secondary { color: #ccc; border-color: #ccc; }
+.btn-outline-secondary:hover { background: #ccc; color: #fff; }
+.btn-sm { font-size: .8rem; padding: .25rem .5rem; }
+.pull-xs-right { margin-left: auto; }
+
+/* ---------- Pagination ---------- */
+.pagination { display: flex; justify-content: center; margin: 1.5rem 0; }
+.page-item .page-link { color: #5cb85c; cursor: pointer; }
+.page-item.active .page-link { background-color: #5cb85c; border-color: #5cb85c; color: #fff; }
+
+/* ---------- Article page ---------- */
+.article-page .banner { padding: 2rem 0; }
+.article-page .banner h1 { font-weight: 600; font-size: 2.8rem; margin-bottom: 1rem; }
+.article-page .article-actions { padding: 1rem 0; text-align: center; }
+.article-page .article-content { padding: 2rem 0; }
+.article-page .article-content p { line-height: 1.9; margin-bottom: 1.5rem; }
+
+/* ---------- Comments ---------- */
+.card { margin-bottom: 1rem; border: 1px solid #e5e5e5; border-radius: .25rem; }
+.card .card-block { padding: 1.25rem; }
+.card .card-footer {
+  background: #f5f5f5;
+  border-top: 1px solid #e5e5e5;
+  padding: .5rem 1.25rem;
+  display: flex;
+  align-items: center;
+}
+.card .card-footer img { width: 20px; height: 20px; border-radius: 50%; margin-right: 5px; }
+.card .card-footer .comment-author { font-weight: 700; color: #5cb85c; }
+.card .card-footer .date-posted { color: #bbb; font-size: .8rem; margin-left: .5rem; }
+.card .card-footer .mod-options { margin-left: auto; }
+.card .card-footer .mod-options i { margin-left: .5rem; cursor: pointer; color: #ccc; }
+.card .card-footer .mod-options i:hover { color: #f00; }
+
+/* ---------- Profile page ---------- */
+.profile-page .user-info {
+  background: #f3f3f3;
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.profile-page .user-info img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+.profile-page .user-info h4 { font-weight: 700; }
+
+/* ---------- Auth ---------- */
+.auth-page { padding: 3rem 0; text-align: center; }
+.auth-page h1 { font-size: 2.5rem; margin-bottom: .5rem; }
+.auth-page .text-muted { font-size: 1.1rem; margin-bottom: 1rem; }
+
+/* ---------- Settings ---------- */
+.settings-page { padding: 1.5rem 0; }
+.settings-page h1 { margin-bottom: 1.5rem; }
+
+/* ---------- Editor ---------- */
+.editor-page { padding: 1.5rem 0; }
+
+/* ---------- Footer ---------- */
+.footer {
+  background: #f3f3f3;
+  border-top: 1px solid #ddd;
+  padding: 1.25rem 0;
+  text-align: center;
+  margin-top: 3rem;
+}
+.footer .logo-font { font-weight: 700; color: #5cb85c; }
+.footer .attribution { font-size: .8rem; color: #bbb; margin-top: .5rem; }
+
+/* ---------- Misc ---------- */
+.logo-font { font-family: "Titillium Web", sans-serif; }
+.error-messages { text-align: left; }
+.error-messages li { list-style: none; }
+.loading-indicator { padding: 2rem 0; text-align: center; color: #aaa; }
+
+/* ---------- Utilities ---------- */
+.container { max-width: 1140px; margin: 0 auto; padding: 0 15px; }
+.row { display: flex; flex-wrap: wrap; margin: 0 -15px; }
+.col-md-9 { flex: 0 0 75%; max-width: 75%; padding: 0 15px; }
+.col-md-3 { flex: 0 0 25%; max-width: 25%; padding: 0 15px; }
+.col-md-12 { flex: 0 0 100%; max-width: 100%; padding: 0 15px; }
+.col-xs-12 { flex: 0 0 100%; max-width: 100%; padding: 0 15px; }
+.offset-md-3 { margin-left: 25%; }
+.col-md-6 { flex: 0 0 50%; max-width: 50%; padding: 0 15px; }
